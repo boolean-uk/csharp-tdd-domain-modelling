@@ -24,7 +24,7 @@ namespace tdd_domain_modelling.CSharp.Main
             {"pear", 1.50m }
         };
 
-        public bool add(string product, int amount)
+        public bool add(string product, int amount, decimal price)
         {
             if (basket.ContainsKey(product))
             {
@@ -32,6 +32,7 @@ namespace tdd_domain_modelling.CSharp.Main
             } else
             {
                 basket.Add(product, amount);
+                pricelist.Add(product, price);
             }
             return true;
         }
