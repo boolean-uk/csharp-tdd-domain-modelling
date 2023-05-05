@@ -60,8 +60,8 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
-| Classes  | Members                                                            | Methods                          | Scenario                                                   | Outputs |
-|----------|--------------------------------------------------------------------|----------------------------------|------------------------------------------------------------|---------|
-| `Basket` | `HashMap<String, int> items` (key is product name, value is price) | `add(String product, int price)` | Item with the provided name *is not* already in the basket | true    |
-|          |                                                                    |                                  | Item with the provided name *is* already in the basket     | false   |
-|          |                                                                    | `total()`                        |                                                            | int     |
+| Classes  | Members                                                               | Methods                          | Scenario                                                   | Outputs |
+|----------|-----------------------------------------------------------------------|----------------------------------|------------------------------------------------------------|---------|
+| `Basket` | `Dictionary<String, int> items` (key is product name, value is price) | `add(string product, int price)` | Item with the provided name *is not* already in the basket | true    |
+|          |                                                                       |                                  | Item with the provided name *is* already in the basket     | false   |
+|          |                                                                       | `total()`                        |                                                            | int     |
