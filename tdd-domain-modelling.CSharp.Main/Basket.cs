@@ -40,8 +40,8 @@ namespace tdd_domain_modelling.CSharp.Main
         {
             decimal totalamount = 0;
             foreach (string product in pricelist.Keys)
-            {
-                totalamount += pricelist[product];
+            {   
+                totalamount += basket[product] * pricelist[product];
             }
             return totalamount;
         }
