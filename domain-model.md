@@ -12,7 +12,7 @@ Here is how one might design a domain model for the above user story:
 |-----------------|---------------------------------------------|------------------------|---------|
 | `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
 |                 |                                             | If name is not in list | false   |
-
+____________________________________________________________________________________________________
 
 
 
@@ -25,9 +25,10 @@ I'd like to be able to know the total cost of items in my basket.
 
 | Classes         | Methods                                     | Scenario               | Outputs |
 |-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
-|                 |                                             | If name is not in list | false   |
+| `Basket`        | `TotalCost()`                               |                        | int     |
 
+// I want to see what int returns TotalCost();
+____________________________________________________________________________________________________
 
 
 ```
@@ -39,8 +40,15 @@ I bought as well as the quantity, and a total cost of my basket.
 
 
 
-| Classes         | Methods                                     | Scenario               | Outputs |
-|-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
-|                 |                                             | If name is not in list | false   |
-
+| Classes         | Methods                                      | Scenario               | Outputs |
+|-----------------|----------------------------------------------|------------------------|---------|
+| `Person`        | `AddPurchase(Product product, int quantity)` | Add product to person  |  void   |
+|                 |                                              |                        |         |
+|  `Product`      | `getName(), getPrice()`                      |                        |str, int |
+|                 |                                              |                        |         |
+|   `Receipt`     | `getReceipt(Person person)`                  |     receipt for person |receipt  |
+|                 |                                              |                        |         |
+|`ReceiptProduct` |`getName(), getPrice(), getQuantity(), getTotal()`  itemized receipt   |str, int,|
+|                 |                                              |                        | int, int|
+|                 |                                              |                        |         |
+_____________________________________________________________________________________________________
