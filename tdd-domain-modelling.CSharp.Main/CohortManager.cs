@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,15 +62,20 @@ namespace tdd_domain_modelling.CSharp.Main
             {
                 Console.WriteLine("product is not in basket");
             }
-
         }
-        public double Total(double number1)
+
+        public decimal Total() // what does total accepts? needs basket and supermarket dict?
         {
+            decimal total = 0;
+            
             // quantity * price en die allemaal bij elkaar optellen
-            return number1;
+            // if basket contains supermarket, supermarket value of the keys
+            // that are also in basket multiply by the value of the key in basket
+
+            return total;
         }
 
-       
+
         public Dictionary<string, int> Basket { get { return basket; } }
     }
 }

@@ -20,13 +20,7 @@ namespace tdd_domain_modelling.CSharp.Test
             Assert.Pass();
         }
 
-        [Test]
-        public void BasketTotalCostTest()
-        {
-            Assert.AreEqual(_basket.Total(1), 1);
-        }
-
-        [Test]
+       [Test]
         public void BasketTotalAddProductTest()
         {
             _basket.AddProduct("apple", 2);
@@ -45,6 +39,12 @@ namespace tdd_domain_modelling.CSharp.Test
         {
             _basket.AddProduct("toiletpaper", 2);
             Assert.False(_basket.Basket.ContainsKey("toiletpaper"));
+        }
+
+        [Test]
+        public void BasketTotalCostTest()
+        {
+            Assert.AreEqual(_basket.Total(), 0.69);
         }
     }
 }
