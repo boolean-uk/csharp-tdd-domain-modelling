@@ -60,7 +60,7 @@ namespace tdd_domain_modelling.CSharp.Main
             }
         }
 
-        public decimal Total() // what does total accepts? does it need basket and supermarket dict?
+        public decimal Total() 
         {
             decimal total = 0;
             foreach (KeyValuePair<string, int> item in basket)
@@ -85,7 +85,6 @@ namespace tdd_domain_modelling.CSharp.Main
                 sb.Append(supermarket[item.Key] * item.Value);
             }
             return sb.ToString();
-            //throw new NotImplementedException();
         }
 
 
