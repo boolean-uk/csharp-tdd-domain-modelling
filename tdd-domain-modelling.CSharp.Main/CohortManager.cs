@@ -79,10 +79,11 @@ namespace tdd_domain_modelling.CSharp.Main
             StringBuilder sb = new StringBuilder();
             foreach (KeyValuePair<string, int> item in basket)
             {
-                sb.Append(item.Key + " " );
-                sb.Append(item.Value + " ");
-                sb.Append(supermarket[item.Key] + " ");
-                sb.Append(supermarket[item.Key] * item.Value);
+                //sb.Append(item.Key + " " );
+                //sb.Append(item.Value + " ");
+                //sb.Append(supermarket[item.Key] + " ");
+                //sb.Append(supermarket[item.Key] * item.Value);
+                sb.Append($"{item.Key} {item.Value} {supermarket[item.Key]} {supermarket[item.Key] * item.Value} {Environment.NewLine} ");
             }
             return sb.ToString();
         }
