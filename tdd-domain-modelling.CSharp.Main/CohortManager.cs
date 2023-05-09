@@ -53,26 +53,39 @@ namespace tdd_domain_modelling.CSharp.Main
             if (basket.ContainsKey(product))
             {
                 basket[product] = basket[product] - quantity;
-                if (basket[product] < 0)
+                if (basket[product] <= 0)
                 {
                     basket.Remove(product);
                 }
             }
-            else
-            {
-                Console.WriteLine("product is not in basket");
-            }
         }
 
-        public decimal Total() // what does total accepts? needs basket and supermarket dict?
+        public decimal Total() // what does total accepts? does it need basket and supermarket dict?
         {
             decimal total = 0;
-            
+            foreach (KeyValuePair<string, int> item in basket)
+            {
+                total += supermarket[item.Key] * item.Value;
+            }
             // quantity * price en die allemaal bij elkaar optellen
             // if basket contains supermarket, supermarket value of the keys
             // that are also in basket multiply by the value of the key in basket
 
             return total;
+        }
+
+        public string Receipt()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (KeyValuePair<string, int> item in basket)
+            {
+                sb.Append(item.Key + " " );
+                sb.Append(item.Value + " ");
+                sb.Append(supermarket[item.Key] + " ");
+                sb.Append(supermarket[item.Key] * item.Value);
+            }
+            return sb.ToString();
+            //throw new NotImplementedException();
         }
 
 
