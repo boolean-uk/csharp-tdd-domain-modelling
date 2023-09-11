@@ -14,56 +14,39 @@ namespace tdd_domain_modelling.CSharp.Test
             String product = "thingie";
             int price = 1;
             //execute
-            basket.addProduct(product, price);
+            basket.addProduct(product, price, quantity);
             //verify
-            Assert.IsTrue(basket.products.ContainsKey(product)); // expect it to be true
+            Receipt receipt = basket.makeReceipt();
+            Assert.IsTrue(receipt.viewTheReceipt.Contains(product)); // expect it to be in the receipt
         }
+
         [Test]
         public void TotalCost()
         {
             //setup
             Basket basket = new Basket();
-            basket.addProduct("AvadakedavrO", 13);
-            basket.addProduct("Harry", 12);
+            basket.addProduct("AvadakedavrO", 13, 1);
+            basket.addProduct("Harry", 12, 2);
             //execute
             int total = basket.totalCost();
             //verify
-            Assert.AreEqual(25, total); // expect it to be 25
+            Assert.AreEqual(37, total); // expect it to be 37, 13+12x2
         }
+
         [Test]
         public void MakeReceiptBasket()
         {
             //setup
             Basket basket = new Basket();
-            basket.addProduct("Lola", 5);
-            basket.addProduct("Pug", 16);
+            basket.addProduct("Lola", 5, 1);
+            basket.addProduct("Pug", 16, 2);
             //execute
             Receipt receipt = basket.makeReceipt();
             //verify
-            Assert.AreEqual(2, receipt.purchasedProducts.Count);
-            Assert.IsTrue(receipt.purchasedProducts.ContainsKey("Lola"));
-            Assert.IsTrue(receipt.purchasedProducts.ContainsKey("Pug"));
-
+            string receiptContent = receipt.viewTheReceipt();
+            Assert.IsTrue(receiptContent.Contains("Lola (1): 5"));
+            Assert.IsTrue(receiptContent.Contains("Pug (2): 32"));
         }
-    }
 
-    [TestFixture]
-    public class ReceiptTests
-    {
-
-        [Test]
-        public void Receipt()
-        {
-            //setup
-            Receipt receipt = new Receipt();
-            receipt.purchasedProducts.Add("Lord", 11);
-            receipt.purchasedProducts.Add("Voldemort", 14);
-            //execute
-            String theReceipt = receipt.viewTheReceipt();
-            //verify
-            String expectedReceipt = "Lord : 11,Voldemort : 14";
-            Assert.AreEqual(expectedReceipt, theReceipt); // expect it to be Lord: 11,Voldemort: 14
-
-        }
     }
 }
