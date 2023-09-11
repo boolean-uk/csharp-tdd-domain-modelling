@@ -13,11 +13,12 @@ namespace tdd_domain_modelling.CSharp.Test
             Basket basket = new Basket();
             String product = "thingie";
             int price = 1;
+            int quantity = 1;
             //execute
-            basket.addProduct(product, price, quantity);
+            basket.AddProduct(product, price, quantity);
             //verify
-            Receipt receipt = basket.makeReceipt();
-            Assert.IsTrue(receipt.viewTheReceipt.Contains(product)); // expect it to be in the receipt
+            Receipt receipt = basket.MakeReceipt();
+            Assert.IsTrue(receipt.ViewTheReceipt().Contains(product)); // expect it to be in the receipt
         }
 
         [Test]
@@ -25,10 +26,10 @@ namespace tdd_domain_modelling.CSharp.Test
         {
             //setup
             Basket basket = new Basket();
-            basket.addProduct("AvadakedavrO", 13, 1);
-            basket.addProduct("Harry", 12, 2);
+            basket.AddProduct("AvadakedavrO", 13, 1);
+            basket.AddProduct("Harry", 12, 2);
             //execute
-            int total = basket.totalCost();
+            int total = basket.TotalCost();
             //verify
             Assert.AreEqual(37, total); // expect it to be 37, 13+12x2
         }
@@ -38,12 +39,12 @@ namespace tdd_domain_modelling.CSharp.Test
         {
             //setup
             Basket basket = new Basket();
-            basket.addProduct("Lola", 5, 1);
-            basket.addProduct("Pug", 16, 2);
+            basket.AddProduct("Lola", 5, 1);
+            basket.AddProduct("Pug", 16, 2);
             //execute
-            Receipt receipt = basket.makeReceipt();
+            Receipt receipt = basket.MakeReceipt();
             //verify
-            string receiptContent = receipt.viewTheReceipt();
+            string receiptContent = receipt.ViewTheReceipt();
             Assert.IsTrue(receiptContent.Contains("Lola (1): 5"));
             Assert.IsTrue(receiptContent.Contains("Pug (2): 32"));
         }
