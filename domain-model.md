@@ -2,5 +2,5 @@
 
 | Classes         | Methods                                          | Scenario               | Outputs |
 |-----------------|--------------------------------------------------|------------------------|---------|
-| `Basket`        | `totalCost(List<Dictionary<string, int>> items)` | User Story #1     | total cost of items in basket |
-| `Basket`        | `toReceipt()`                                    | User Story #2 | an itemised receipt that includes the name and price of the products bought as well as the quantity, and a total cost of the basket  |
+| `Basket`        | `totalCost(Dictionary<string, int> items)` (key is product name, value is quantity) | User Story #1     | total cost of items in basket |
+| `Basket`        | `toReceipt()`                                    | User Story #2 | `List<string>` (each element is a row of the receipt `"name quantity price"` and the last element is `"Total: cost"`) |
