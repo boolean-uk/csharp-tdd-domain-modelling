@@ -37,6 +37,12 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+| Classes         | Methods                                                          | Scenario                         | Outputs |
+|-----------------|------------------------------------------------------------------|----------------------------------|---------|
+| `Checkout.cs`   | `List<Item> basket` with item, price, quantity					 | Store items + price + quantity   | List    |
+| `Checkout.cs`   | Method `AddToBasket(item,price,quantity)`						 | Store items + price + quantity   | Void    |
+| `Checkout.cs`   | Method `CheckoutSum(basket)`									 | Sum cost for each item			| Int     |
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
@@ -44,9 +50,16 @@ I'd like to see an itemised receipt that includes the name and price of the prod
 I bought as well as the quantity, and a total cost of my basket.
 ```
 
+| Classes         | Methods																		     | Scenario                       | Outputs |
+|-----------------|----------------------------------------------------------------------------------|--------------------------------|---------|
+| `Checkout.cs  ` | Method `Receipt()`																 | Upon request, return receipt   | List    |
+|				  |	- the returns the basket, quantity of each item and								 |								  |         |
+|				  | - sum total (CheckoutSum() added as final item to list)							 |								  |			|
+
+
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
 - Your model doesn't have to look like the example provided in this file. If you   
   feel like you need more or less columns, feel free to go with that. 
-  There is no "right way" to do this kind of thing, we're just   
+  There is no "right way" to do this kind of thing, we're just.   
   designing a system to make our lives easier when it comes to the coding part.
