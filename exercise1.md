@@ -2,7 +2,11 @@
 
 ### Warm up
 
-A **User Story** describes one thing a program is expected to do, from the perspective of somebody using that program. When planning a program, the client's requirements will be decomposed into many User Stories. Much of a developer's life is spent translating User Stories into a functional system. These systems are made up of different components, and each component is made up of units. We call these systems **Domain Models**.
+A **User Story** describes one thing a program is expected to do, from the 
+perspective of somebody using that program. When planning a program, the client's 
+requirements will be decomposed into many User Stories. Much of a developer's life is 
+spent translating User Stories into a functional system. These systems are made up of different components, 
+and each component is made up of units. We call these systems **Domain Models**.
 
 There are various different formats for user stories but they all share a common goal: describe a feature the user wants. Here's one style of user story:
 
@@ -37,12 +41,58 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+//USER STORY 1 - Supermarket
+//CLASS 
+Item
+//VARIABLES
+Cost(double)
+String(Product Name)
+Id(Int i)
+
+//Methods
+UpdatePrice out void()
+
+
+
+//CLASS
+Inventory
+//VARIABELS
+Basket (List of Item)
+TotCost (Get - Derived from sum of cost of items)
+//METHODS
+
+AddItemToList() out void - Updates Basket with new item
+
+RemoveItemFromList() out void - Removes item from Basket
+
+SumOfItems() out int	 - Loops trough BasketList and Sums items
+				 - Returns False if empty
+
+Purchase() out void - Empties Basket and Returns a Receipt
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
 I'd like to see an itemised receipt that includes the name and price of the products
 I bought as well as the quantity, and a total cost of my basket.
 ```
+
+//USER STORY 2
+//CLASS
+Reciept
+
+//Variables
+Items (List of Item)
+TotalCost
+
+//Methods
+ProduceOverview() out string	
+		- Produces a readable output for user
+		- Loops over items (for identical IDS combines them)
+		- Produce product name, QTY, price of singleitems aswell as QTY*price
+		- Print TotalCost
+
+
 
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
