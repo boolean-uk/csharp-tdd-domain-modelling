@@ -8,37 +8,15 @@ namespace tdd_domain_modelling.CSharp.Main
 {
     public class CohortManager
     {
-        private Dictionary<string, int> items;
-
-        public CohortManager()
+        public bool Search(List<string> cohorts, string name)
         {
-            items = new Dictionary<string, int>();
-        }
-
-        public bool add(string product, int price)
-        {
-            bool notInBasket = true;
-
-            for (int i = 0; i < items.Count(); i++)
+            for (int i = 0; i < cohorts.Count(); i++)
             {
-                if (items.ContainsKey(product))
-                    notInBasket = false;
+                if (cohorts[i] == name)
+                    return true;
             }
 
-            if (notInBasket)
-                items.Add(product, price);
-
-            return notInBasket;
-        }
-
-        public int total()
-        {
-            int totalCost = 0;
-
-            for (int i = 0; i < items.Count(); i++)
-                totalCost += items.ElementAt(i).Value;
-
-            return totalCost;
+            return false;
         }
     }
 }

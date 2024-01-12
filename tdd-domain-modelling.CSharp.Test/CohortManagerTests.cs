@@ -8,50 +8,25 @@ namespace tdd_domain_modelling.CSharp.Test
     {
         CohortManager manager;
 
-        [SetUp]
-        public void SetUp()
+        [SetUp] public void SetUp()
         {
             manager = new CohortManager();
         }
 
-        [Test]
-        public void AddingItemsToBasket()
+        [TestCase("Klara", true)]
+        [TestCase("Emelie", false)]
+        [TestCase("Elsa", true)]
+        [TestCase("Klaras", false)]
+        public void FindCohortByName(string findName, bool expectedResult)
         {
-            bool result = manager.add("Cheese", 30);
-            bool result2 = manager.add("Ham", 40);
+            List<string> cohorts = new List<string>();
+            cohorts.Add("Klara");
+            cohorts.Add("Arvid");
+            cohorts.Add("Erik");
+            cohorts.Add("Elsa");
 
-            Assert.IsTrue(result2);
-        }
-
-        [Test]
-        public void AddingDoubleItemsToBasket()
-        {
-            bool result = manager.add("Cheese", 30);
-            bool result2 = manager.add("Cheese", 40);
-
-            Assert.IsFalse(result2);
-        }
-
-        [Test]
-        public void TestingTotalValue()
-        {
-            manager.add("Ham", 40);
-            manager.add("Cheese", 30);
-            manager.add("Milk", 50);
-            int totalCost = manager.total();
-
-            Assert.That(120, Is.EqualTo(totalCost));
-        }
-
-        [Test]
-        public void TestingTotalDoubles()
-        {
-            manager.add("Ham", 40);
-            manager.add("Ham", 30);
-            manager.add("Milk", 50);
-            int totalCost = manager.total();
-
-            Assert.That(90, Is.EqualTo(totalCost));
+            bool foundName = manager.Search(cohorts, findName);
+            Assert.That(foundName, Is.EqualTo(expectedResult));
         }
     }
 }
