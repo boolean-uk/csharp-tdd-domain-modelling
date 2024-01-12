@@ -32,8 +32,8 @@ I bought as well as the quantity, and a total cost of my basket.
 |                 |               |                                             |                        | price & quantity|
 |                 |               |                                             |                        |                 |
 | `Product`       |`int price`    | `get(String name, Int price)`               | If name is not in list | Null            |
-| `Product`       |`int quantity` |                                             |                        |                 |
-| `Product`       |`string name`  |                                             |                        |                 |
+|                 |`int quantity` |                                             |                        |                 |
+|                 |`string name`  |                                             |                        |                 |
 
 	
 - Your model doesn't have to look like the example provided in this file. If you   
