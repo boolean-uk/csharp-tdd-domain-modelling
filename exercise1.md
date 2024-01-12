@@ -24,9 +24,12 @@ Here is how one might design a domain model for the above user story:
 > **Time to analyse**
 >
 > Evaluate the user story and the domain model above. What assumptions did the developer have to make and what would you do differently?
-> 
+The List in Methods could have been concisting of Objects instead of string. The output is of boolean value. The user could have wanted the whoule course if it was a object with other attributes. Name of class could be different. You would not necessary have to pass the list of cohorts as well as the string. 
 > Create your own domain model for the user story above, try to come up with a different solution than the model provided. You can use a table like the one above, a spreadsheet, pen and paper, whatever you'd like. Share your work in your cohorts classroom channel when you're done.
-
+| Classes         | Methods                                     | Scenario               | Outputs |
+|-----------------|---------------------------------------------|------------------------|---------|
+| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | true    |
+|                 |                                             | If name is not in list | false   |
 ### Exercise
 
 Follow the same process as above to translate these two user stories into domain models.
