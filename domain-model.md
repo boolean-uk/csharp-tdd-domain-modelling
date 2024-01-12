@@ -4,13 +4,16 @@
 | Classes | Fields | Type |
 |-|-|-| 
 | POSManager | | |
-| Product | _name | string |
-| Product | _price | float |
+| Product | `string _name` `float _price` |
+| Basket | `List<Product, int> contents` |
 
 | Classes         | Methods                                     | Scenario               | Outputs |
 |-----------------|---------------------------------------------|------------------------|---------|
-| `POSManager`	  | `calculateTotalCost(List<string, float> checkoutItems) ` | Show shopper their total cost at checkout    | float    |
-| `POSManager` | `printReceipt(string[] receiptLines, float totalPrice)` | Print a itemized receipt | string[] |
-| `POSManager` | `printLine(Product product, int quantity)` |  Print a itemized receipt | string |
-| `Product` | `getProductName()`|  Print a itemized receipt | string |
-| `Product` | `getProductPrice()` |  Print a itemized receipt | float |
+| `POSManager`	  | `CalculateTotalCost(List<string, float> shoppingItems) ` | Show shopper total cost.    | float    |
+| `POSManager` | `PrintReceipt(string[] receiptLines, float totalPrice)` | Print a itemized receipt. | string[] |
+| `POSManager` | `PrintLine(Product product, int quantity)` |  Print a itemized receipt. | string |
+| `POSManager`	  | `CalculateTotalCost(List<Product, int> shoppingItems) ` | Print a itemized receipt. | float    |
+| `Basket` | `GtAllBasketItems()` | Print a itemized receipt. | List<Product, int> |
+| `Basket` | `AddItemToBasket(Product product)` | Print a itemized receipt. | void |
+| `Product` | `GetProductName()`|  Print a itemized receipt. | string |
+| `Product` | `GetProductPrice()` |  Print a itemized receipt. | float |
