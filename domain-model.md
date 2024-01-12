@@ -22,7 +22,7 @@ I bought as well as the quantity, and a total cost of my basket.
 ```
 
 | Classes         |   Item        | Methods                                     | Scenario               | Outputs         |
-|-----------------|-------------------------------------------------------------|------------------------|-----------------|
+|-----------------|---------------|---------------------------------------------|------------------------|-----------------|
 | `Shopper`       |               | `BasketPrice(List<Product> basket)`         | If List not empty      | sum             |
 |                 |               |                                             | If List empty          | 0               |
 |                 |               | `add(List<Product> basket, Product product)`|                        |                 |
