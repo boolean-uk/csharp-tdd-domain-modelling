@@ -37,6 +37,11 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+| Classes         | Methods                                                      | Scenario                       | Outputs					   |
+|-----------------|--------------------------------------------------------------|--------------------------------|----------------------------|
+| `Checkout`      | `totalCost()`											     | calculate price			      | double					   |
+|                 |                                                              
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
@@ -44,6 +49,10 @@ I'd like to see an itemised receipt that includes the name and price of the prod
 I bought as well as the quantity, and a total cost of my basket.
 ```
 
+| Classes         | Methods                                                      | Scenario                                           | Outputs                                                                  |
+|-----------------|--------------------------------------------------------------|----------------------------------------------------|----------------------------------------|
+| `Shopper`       | `showReciept(Dictionary<String, int, double> shoppingCart)`	 | checking reciept for items, quantity and price     |Dictionary<String, int, double>, double |
+|  
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
 - Your model doesn't have to look like the example provided in this file. If you   
