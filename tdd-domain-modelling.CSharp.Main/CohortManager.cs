@@ -20,9 +20,7 @@ namespace tdd_domain_modelling.CSharp.Main
         }
         public bool Add(string product, int price)
         {
-            bool itemExists = Items.ContainsKey(product);
-
-            if (!itemExists)
+            if (!Items.ContainsKey(product))
             {
                 Items.Add(product, price);
                 return true;
@@ -34,12 +32,7 @@ namespace tdd_domain_modelling.CSharp.Main
         }
         public int Total()
         {
-            int result = 0;
-            foreach (KeyValuePair<string, int> item in Items)
-            {
-                result += item.Value;
-            }
-            return result;
+            return Items.Values.Sum();
         }
     }
 }
