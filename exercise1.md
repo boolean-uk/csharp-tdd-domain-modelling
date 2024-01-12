@@ -50,3 +50,25 @@ I bought as well as the quantity, and a total cost of my basket.
   feel like you need more or less columns, feel free to go with that. 
   There is no "right way" to do this kind of thing, we're just   
   designing a system to make our lives easier when it comes to the coding part.
+
+
+
+
+  //
+User Story1:
+As a supermarket shopper,
+So that I can pay for products at checkout,
+I'd like to be able to know the total cost of items in my basket
+
+User Story2:
+As an organised individual,
+So that I can evaluate my shopping habits,
+I'd like to see an itemised receipt that includes the name and price of the products
+I bought as well as the quantity, and a total cost of my basket.
+
+Domain Model:
+Classes |Properties                                         |  Methods                |Scenario|            |   Outputs|
+Basket  |Dictionary<string itemName,  double cost> itemPrice|totalCost(itemsInBasket) |Calculate total cost |total cost by summing all items with price|
+		|Dictionary<string itemName, int amount> itemsInBasket
+		| Methods                |Scenario                                   |       Outputs                             |
+Reciep  | String generateReceipt(itemsInBaske)|Prints to user price and name of a product |Produces a readable output for user(string)|
