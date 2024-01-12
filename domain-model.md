@@ -1,9 +1,9 @@
 #Domain Models In Here
 ### Exercise 1
 
-| Classes | Fields | Type |
-|-|-|-| 
-| POSManager | | |
+| Classes | Fields |
+|-|-|
+| POSManager | |
 | Product | `string _name` `float _price` |
 | Basket | `List<Product, int> contents` |
 
