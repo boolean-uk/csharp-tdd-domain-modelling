@@ -36,6 +36,12 @@ As a supermarket shopper,
 So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
+| Classes         | Methods                                     | Scenario						| Outputs |
+|-----------------|---------------------------------------------|-------------------------------|---------|
+| `TotalCost`	  | return totalcost							| Returns total cost of items	|total cost|
+| `Additems`      | public void AddItem(Product product)		| Adds an item to checkout		| Item added to list|
+| `Calculate Cost`| double CalculateTotal()						| Calculate cost of all items	|Total cost|
+        
 
 ```
 As an organised individual,
@@ -44,6 +50,12 @@ I'd like to see an itemised receipt that includes the name and price of the prod
 I bought as well as the quantity, and a total cost of my basket.
 ```
 
+| Classes         | Methods                                     | Scenario						| Outputs |
+|-----------------|---------------------------------------------|-------------------------------|---------|
+| `TotalCost`	  | return totalcost							| Returns total cost of items	|total cost|
+| `Additems`      | public void AddItem(Product product)		| Adds an item to checkout		| Item added to list|
+| `Calculate Cost`| double CalculateTotal()						| Calculate cost of all items	|Total cost|
+   Receipt			return Product, total cost						Returns all products and total cost| "Products, quantity, cost, total cost
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
 - Your model doesn't have to look like the example provided in this file. If you   
