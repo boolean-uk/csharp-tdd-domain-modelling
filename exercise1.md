@@ -29,10 +29,10 @@ Here is how one might design a domain model for the above user story:
 
 ANS: My own domain model
 
-| Classes         | Methods                                     | Scenario               | Outputs |
-|-----------------|---------------------------------------------|------------------------|---------|
-| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | name    |
-|                 |                                             | If name is not in list | Null    |
+| Classes         | Methods                                     | Scenario               | Outputs       |
+|-----------------|---------------------------------------------|------------------------|---------------|
+| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | name          |
+|                 |                                             | If name is not in list | "not found!"  |
 
 ### Exercise
 
