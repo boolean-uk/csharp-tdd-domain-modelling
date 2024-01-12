@@ -27,6 +27,13 @@ Here is how one might design a domain model for the above user story:
 > 
 > Create your own domain model for the user story above, try to come up with a different solution than the model provided. You can use a table like the one above, a spreadsheet, pen and paper, whatever you'd like. Share your work in your cohorts classroom channel when you're done.
 
+ANS: My own domain model
+
+| Classes         | Methods                                     | Scenario               | Outputs |
+|-----------------|---------------------------------------------|------------------------|---------|
+| `CohortManager` | `search(List<String> cohorts, String name)` | If name is in list     | name    |
+|                 |                                             | If name is not in list | Null    |
+
 ### Exercise
 
 Follow the same process as above to translate these two user stories into domain models.
