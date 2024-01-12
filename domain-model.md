@@ -8,8 +8,8 @@ I'd like to be able to know the total cost of items in my basket.
 ```
 | Classes         | Methods                                     | Scenario               | Outputs       |
 |-----------------|---------------------------------------------|------------------------|---------------|
-| `Basket`		  | `getTotalCost(List<Item> items)`            | If items not empty     | cost of items |
-																| If items empty		 | 0             |
+| `Basket`	  | `getTotalCost(List<Item> items)`            | If items not empty     | cost of items |
+|                 |                                             | If items empty	 | 0             |
 
 ```
 As an organised individual,
@@ -20,4 +20,4 @@ I bought as well as the quantity, and a total cost of my basket.
 | Classes         | Methods                                     | Scenario               | Outputs                                      |
 |-----------------|---------------------------------------------|------------------------|----------------------------------------------|
 | `Basket`        | `createReceipt(List<Item> items)`           | If items not empty     | {[ItemName, ItemPrice, Quantity], TotalPrice}|
-																| If items empty		 | {[], 0}                                      |
+|                 |                                             | If items empty	 | {[], 0}                                      |
