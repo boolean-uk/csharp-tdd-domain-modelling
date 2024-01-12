@@ -12,7 +12,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
   </ItemGroup>
 
-    <ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\tdd-domain-modelling.CSharp.Main\tdd-domain-modelling.CSharp.Main.csproj" />
   </ItemGroup>
 
