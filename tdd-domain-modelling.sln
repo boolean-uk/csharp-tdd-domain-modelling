@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tdd-domain-modelling.CSharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B724F5E-2717-4859-9742-34930C5C7956}"
 	ProjectSection(SolutionItems) = preProject
+		domain-model-ex2.md = domain-model-ex2.md
 		domain-model.md = domain-model.md
 		exercise1.md = exercise1.md
 		exercise2.md = exercise2.md
