@@ -17,7 +17,7 @@ namespace tdd_domain_modelling.CSharp.Main
 
         public int total()
         {
-            throw new NotImplementedException();
+            return items.Sum(item => item.Value);
         }
     }
 };
