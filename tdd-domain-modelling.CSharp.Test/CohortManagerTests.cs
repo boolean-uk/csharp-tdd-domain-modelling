@@ -7,7 +7,7 @@ namespace tdd_domain_modelling.CSharp.Test
     public class CohortManagerTest
     {
         [Test]
-        public void FirstTest()
+        public void TestSearch()
         {
             CohortManager core = new CohortManager();
         }
