@@ -59,5 +59,30 @@ namespace tdd_domain_modelling.CSharp.Test
             Assert.That(shopper._basket, Is.EqualTo(tester));
 
         }
+
+        [Test]
+        public void ReceitTest()
+        {
+            Product pro1 = new Product("B", 2, 3);
+            Product pro2 = new Product("A", 5, 2);
+            Product pro3 = new Product("G", 4, 6);
+            shopper.AddProduct(pro1);
+            shopper.AddProduct(pro2);
+            shopper.AddProduct(pro3);
+
+            List<string> res = shopper.Receit();
+
+            List<string> tester = new List<string> { "B, 2$, 3kg", "A, 5$, 2kg", "G, 4$, 6kg", "total: 11" };
+
+            Assert.AreEqual(res, tester);
+        }
+
+        [Test]
+        public void NothingBought()
+        {
+
+            List<string> res = shopper.Receit();
+            Assert.That(res.Count, Is.EqualTo(0));
+        }
     }
 }

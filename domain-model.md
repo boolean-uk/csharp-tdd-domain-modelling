@@ -6,12 +6,13 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
-| Classes         | Methods                                     | Scenario               | Outputs            |
-|-----------------|---------------------------------------------|------------------------|--------------------|
-| `Shopper`       | `BasketPrice(List<Product> basket)`         | If List not empty      | sum of the basket  |
-|                 |                                             | If List empty          | 0                  |
-|                 | `add(List<Product> basket, Product product)`|                        |                    |
-| `Product`       | `get(String name, Int price)`               | If product exists      | Product            |
+| Classes         |   Item           |  Methods                               | Scenario               | Outputs                        |
+|-----------------|-----------------------------------------------------------|------------------------|--------------------------------|
+| `Shopper`       | `List<Product>`  |`BasketPrice(List<Product> basket)`     | `If List not empty`    |`sum of the basket list prices` |
+|                 |                  |                                        | `If List empty`        | 0                              |
+|                 |                  | `AddProduct(Product product)`          |                        |                                |
+| `Product`       | `string name`    |                                        |                        |                                |
+|                 | `int price`      |                                        |                        |                                |
 
 
 ```
@@ -25,13 +26,13 @@ I bought as well as the quantity, and a total cost of my basket.
 |-----------------|---------------|---------------------------------------------|------------------------|-----------------|
 | `Shopper`       |               | `BasketPrice(List<Product> basket)`         | If List not empty      | sum             |
 |                 |               |                                             | If List empty          | 0               |
-|                 |               | `add(List<Product> basket, Product product)`|                        |                 |
-|                 |               | `Receit(List<Product> basket)`              | If List not empty      | List of Unique  |
+|                 |               | `AddProduct(Product product)`               |                        |                 |
+|                 |               | `Receit(List<Product> basket)`              | If List not empty      | List of         |
 |                 |               |                                             |                        | products with   |
-|                 |               |                                             |                        | aggregated      |
 |                 |               |                                             |                        | price & quantity|
-|                 |               |                                             |                        |                 |
-| `Product`       |`int price`    | `get(String name, Int price)`               | If name is not in list | Null            |
+|                 |               |                                             |                        | and total sum   |
+|                 |               |                                             | If List empty          | empty list      |
+| `Product`       |`int price`    |                                             |                        |                 |
 |                 |`int quantity` |                                             |                        |                 |
 |                 |`string name`  |                                             |                        |                 |
 

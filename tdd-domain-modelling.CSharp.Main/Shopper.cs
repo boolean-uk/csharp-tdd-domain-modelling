@@ -43,10 +43,29 @@ namespace tdd_domain_modelling.CSharp.Main
             return total;
         }
 
-        public List<Product> Receit()
+        public List<string> Receit()
         {
+            List<string> col = new List<string>();
 
-            return _basket;
+            if(_basket.Count < 1)
+            {
+                return col;
+            }
+            
+            foreach (Product item in _basket)
+            {
+                string tmp = $"{item._name}, {item._price}$, {item._quantity}kg";
+                col.Add(tmp);
+
+            }
+
+            int total = _basket.Sum(x => x._price);
+
+            string tl = $"total: {total}";
+
+            col.Add(tl);
+
+            return col;
         }
     }
 }
