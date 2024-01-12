@@ -24,8 +24,11 @@ Here is how one might design a domain model for the above user story:
 > **Time to analyse**
 >
 > Evaluate the user story and the domain model above. What assumptions did the developer have to make and what would you do differently?
+> The class of CohortManager > CohortList
 > 
 > Create your own domain model for the user story above, try to come up with a different solution than the model provided. You can use a table like the one above, a spreadsheet, pen and paper, whatever you'd like. Share your work in your cohorts classroom channel when you're done.
+
+
 
 ### Exercise
 
@@ -37,12 +40,17 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
 I'd like to see an itemised receipt that includes the name and price of the products
 I bought as well as the quantity, and a total cost of my basket.
 ```
+
+
+
 
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
