@@ -37,12 +37,21 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+| Classes         | Methods                                     | Scenario                    | Outputs |
+|-----------------|---------------------------------------------|-----------------------------|---------|
+| `Basket`		  | `sumOfItems()`								| Sum price of items in basket| float   |
+| `Basket`		  | `addItem(string item, int price)`			| Adds item to basket         | void    |
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
 I'd like to see an itemised receipt that includes the name and price of the products
 I bought as well as the quantity, and a total cost of my basket.
 ```
+
+| Classes         | Methods                                     | Scenario									| Outputs					 |
+|-----------------|---------------------------------------------|-------------------------------------------|----------------------------|
+| `Basket`        | `checkOut(out float price)`                 | List of bought items, with duplicates     | List<Tuple<string, int>>   |
 
 - Add your domain models as images to the project, or in the `domain-model.md` file.   
 	
