@@ -15,5 +15,9 @@ namespace tdd_domain_modelling.CSharp.Main
             throw new NotImplementedException();
         }
 
+        public int total()
+        {
+            throw new NotImplementedException();
+        }
     }
 };
