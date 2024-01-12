@@ -12,7 +12,7 @@ namespace tdd_domain_modelling.CSharp.Main
 
         public bool add(string product, int price) 
         {
-            throw new NotImplementedException();
+            return items.TryAdd(product, price);
         }
 
         public int total()
