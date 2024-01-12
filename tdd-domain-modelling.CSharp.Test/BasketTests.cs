@@ -32,12 +32,14 @@ namespace tdd_domain_modelling.CSharp.Test
 
             bool result = basket.Add("peanut butter", 4f);
             Assert.IsTrue(result);
+            Assert.That(basket.items.Count, Is.EqualTo(4));
         }
         [Test]
         public void AddDuplicateTest()
         {
 
             bool result = basket.Add("bread", 2f);
+            Assert.That(basket.items.Count, Is.EqualTo(3));        
             Assert.IsFalse(result);
         }
         [Test]
@@ -45,6 +47,8 @@ namespace tdd_domain_modelling.CSharp.Test
         {
             //setup
             bool result = basket.Add("honey", 4f);
+
+            Assert.That(basket.items.Count, Is.EqualTo(3));
             Assert.IsFalse(result);
         }
 

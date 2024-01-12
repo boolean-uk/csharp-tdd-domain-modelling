@@ -9,7 +9,7 @@ namespace tdd_domain_modelling.CSharp.Main
 {
     public class Basket
     {
-        Dictionary<string, float> items;
+        public Dictionary<string, float> items;
 
         public Basket(Dictionary<string, float> items)
         {
