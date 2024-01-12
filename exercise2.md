@@ -9,9 +9,9 @@ When writing software using this Test Driven Development approach, we don't writ
 
 What we are creating here are known as *unit tests*, tests that verify a single unit of our application is working correctly. They should be as small as possible, usually broken down into three parts:
 
-1. Setup
-2. Execute
-3. Verify
+1. Setup  - Arrange
+2. Execute - Act
+3. Verify - Assert
 
 Here's some pseudo-code to show the structure of a unit test:
 ```
