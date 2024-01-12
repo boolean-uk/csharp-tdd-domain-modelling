@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using tdd_domain_modelling.CSharp.Main;
+
+CohortManager manager = new CohortManager();
+Basket basket = new Basket();
