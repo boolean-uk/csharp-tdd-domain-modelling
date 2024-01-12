@@ -11,9 +11,9 @@
 |-----------------|---------------------------------------------|------------------------|---------|
 | `POSManager`	  | `CalculateTotalCost(List<string, float> shoppingItems) ` | Show shopper total cost.    | float    |
 | `POSManager` | `PrintReceipt(string[] receiptLines, float totalPrice)` | Print a itemized receipt. | string[] |
-| `POSManager` | `PrintLine(Product product, int quantity)` |  Print a itemized receipt. | string |
-| `POSManager`	  | `CalculateTotalCost(List<Product, int> shoppingItems) ` | Print a itemized receipt. | float    |
-| `Basket` | `GtAllBasketItems()` | Print a itemized receipt. | List<Product, int> |
-| `Basket` | `AddItemToBasket(Product product)` | Print a itemized receipt. | void |
-| `Product` | `GetProductName()`|  Print a itemized receipt. | string |
-| `Product` | `GetProductPrice()` |  Print a itemized receipt. | float |
+| `POSManager` | `PrintLine(Product product, int quantity)` |  Print a line with product information. | string |
+| `POSManager`	  | `CalculateTotalCost(List<Product, int> shoppingItems) ` | Show shopper total cost. | float    |
+| `Basket` | `GtAllBasketItems()` | Retrieve all items currently in the basket. | List<Product, int> |
+| `Basket` | `AddItemToBasket(Product product)` | Add item to the basket. | void |
+| `Product` | `GetProductName()`|  Get product name. | string |
+| `Product` | `GetProductPrice()` |  Get product price. | float |
