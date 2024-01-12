@@ -19,7 +19,20 @@ namespace tdd_domain_modelling.CSharp.Test
         {
             Shopper shopper = new();
             Product product = new(name, price);
-            shopper.Restock(product);
+            shopper.Basket.Add(product);
+            shopper.Restock();
+            Assert.That(shopper.Cupboard.Contains(product), Is.True);
+        }
+
+        [Test]
+        [TestCase("Milk", 3)]
+        [TestCase("Apple", 5)]
+        [TestCase("Coffee", 10)]
+        public void AddTest(string name, float price)
+        {
+            Shopper shopper = new();
+            Product product = new(name, price);
+            shopper.Add(product);
             Assert.That(shopper.Basket.Contains(product), Is.True);
         }
     }

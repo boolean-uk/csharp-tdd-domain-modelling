@@ -18,8 +18,8 @@ I'd like to be able to know the total cost of items in my basket.
 	</tr>
 	<tr>
 		<td><code>Shopper</code></td>
-		<td><code>Restock(ICollection&ltProduct> products)</code></td>
-		<td>Insert products into cupboard</td>
+		<td><code>Restock(List&ltProduct> products)</code></td>
+		<td>Insert products from basket into cupboard</td>
 		<td>void</td>
 	</tr>
 	<tr>
