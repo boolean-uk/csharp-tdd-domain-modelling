@@ -23,7 +23,9 @@ namespace tdd_domain_modelling.CSharp.Test.Supermarket
         {
             Order order = new Order();
             List<Tuple<Product, int>> items = order.Items;
-            Assert.That(items.Count == 0);
+            order.AddItem(new Product("Apple", 1m), 3);
+            order.AddItem(new Product("Grapes", 5m), 1);
+            Assert.That(items.Count == 2);
         }
 
         [Test]
