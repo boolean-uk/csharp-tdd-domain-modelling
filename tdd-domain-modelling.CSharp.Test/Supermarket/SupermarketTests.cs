@@ -10,7 +10,12 @@ namespace tdd_domain_modelling.CSharp.Test.Supermarket
         {
             Order order = new Order();
             decimal totalCost = order.TotalCost();
-            Assert.That(totalCost >= 0m);
+            Assert.That(totalCost == 0m);
+            order.AddItem(new Product("Apple", 1m), 3);
+            order.AddItem(new Product("Pear", 2m), 1);
+            Assert.That(order.TotalCost() == 5m);
+            order.AddItem(new Product("Wine", 41m), 7);
+            Assert.That(order.TotalCost() == 5m + 41m * 7);
         }
 
         [Test]
@@ -19,6 +24,20 @@ namespace tdd_domain_modelling.CSharp.Test.Supermarket
             Order order = new Order();
             List<Tuple<Product, int>> items = order.Items;
             Assert.That(items.Count == 0);
+        }
+
+        [Test]
+        public void OrderGenerateItimizedReceiptTest()
+        {
+            Order order = new Order();
+            order.AddItem(new Product("Ham", 20m), 2);
+            order.AddItem(new Product("Yoghurt", 12m), 4);
+            order.AddItem(new Product("Milk", 12m), 3);
+            order.AddItem(new Product("Extra Virgin Olive Oil", 30m), 1);
+            order.AddItem(new Product("Toamto", 4m), 25);
+            string receipt = order.GenerateItimizedReceipt();
+            Assert.That(receipt.Length > 0);
+            Console.WriteLine(receipt);
         }
 
         [Test]
