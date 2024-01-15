@@ -21,8 +21,9 @@ I'd like to be able to know the total cost of items in my basket.
 
 | Classes            |                            Methods								    | Scenario                  | Outputs     |
 |--------------------|----------------------------------------------------------------------|---------------------------|------------ |
-| `SupermarketBasket`|              `calculateTotalCost()`                                  |Basket have items          |Total coast  |                   
-|                    |                                                                      |Basket is empty            | 0           |
+| `Basket`           |              `Total(Dictionary<string name, int price>)`             |Basket have items          |Total coast  |                   
+|                    |                                                                      |Basket is empty            | false       |
+
 
 #User story3
 ```
@@ -33,11 +34,11 @@ I bought as well as the quantity, and a total cost of my basket.
 ```
 
 
-| Classes                    |                            Methods								    | Scenario                  | Outputs         |
-|----------------------------|----------------------------------------------------------------------|---------------------------|-----------------|
-| `Product`                  |               `Product(name: String, price: Float)`                  | Create a product          |  Product object |
-|                            |                                                                      |                           |                 |
-| `ShoppingReceiptOverview`  |              `AddShoppingReceiptItems(String name, int price)`       |Basket have items          |  Receipt        |                    
-|                            |                                                                      |Basket is empty            |  string message |
-|                            |                                                                      |                           |                 |
+| Classes                    |                            Methods								    | Scenario                  | Outputs                                                     |
+|----------------------------|----------------------------------------------------------------------|---------------------------|-------------------------------------------------------------|
+| `Basket `                  |               `Product(name: String, price: Float, int quantity)`    | Create a product          |  Product object                                             |
+|                            |                                                                      |                           |                                                             |
+| `Item                   `  |              `AddReceiptItems(product)`                              |Basket have items          |  Receipt containing name, price, quantity and total cost    |                    
+|                            |                                                                      |Basket is empty            |  string message                                             |
+|                            |                                                                      |                           |                                                             |
 
