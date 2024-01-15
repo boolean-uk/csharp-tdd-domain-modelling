@@ -30,8 +30,8 @@ namespace tdd_domain_modelling.csharp.test
             Assert.IsTrue(_basket.ContainsKey(item));
         }
 
-        [TestCase("apple", 10)]
-        [TestCase("Orange", 5)]
+        [TestCase("orange juice", 10)]
+        [TestCase("oat milk", 20)]
         public void BooleanAddTest(string item, int price)
         {
             //arrange
@@ -50,7 +50,7 @@ namespace tdd_domain_modelling.csharp.test
             //arrange 
             Basket basket = new Basket();
             basket.Add("apple", 10);
-            basket.Add("bana", 5);
+            basket.Add("banana", 5);
             //act 
             int result = basket.sum();
 
