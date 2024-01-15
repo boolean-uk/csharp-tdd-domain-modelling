@@ -28,4 +28,4 @@ I bought as well as the quantity, and a total cost of my basket.
 | Classes         | Methods                                     | Scenario               | Outputs |
 |-----------------|---------------------------------------------|------------------------|---------|
 | `Receipt` | `double CalculateCost(List<Products> products)`  |  |   |
-|            |                                                  | If list is empty | 0     |
+|            | 'string PrintReciept()'                         |  |                      | If list is empty | 0     |
