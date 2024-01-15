@@ -24,7 +24,7 @@ namespace td_domain_modelling.CSharp.Main
 
         public int Total()
         {
-            throw new NotImplementedException();
+            return _items.Values.Sum();
         }
 
         public Dictionary<string, int> items { get { return _items;  } set { _items = value; } }
