@@ -37,6 +37,10 @@ So that I can pay for products at checkout,
 I'd like to be able to know the total cost of items in my basket.
 ```
 
+Class:                  Methods:                                    Returns
+Basket      CalculateCost(Dictionary<string name, int price>) -> return int (total cost)
+
+
 ```
 As an organised individual,
 So that I can evaluate my shopping habits,
