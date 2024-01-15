@@ -57,9 +57,8 @@ I bought as well as the quantity, and a total cost of my basket.
 
 | Classes         | Members              |Methods                  | Scenario               | Outputs    |
 |-----------------|----------------------|-------------------------|------------------------|------------|
-|`Product`	  | `string code, double price`, int quantity|			   |                        |            |
-
-|`Reciept`	  |`List<Product> prods` |`double SumOfProducts() `|Add prods.price * prods.quantity  | 		return sum
+|`Product`	  | `string code, double price, int quantity`|     |                        |            |           
+|`Reciept`	  |`List<Product> prods` |`double SumOfProducts() `|Add prods.price * prods.quantity  | return sum |
 
 
 
