@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 namespace tdd_domain_modelling.CSharp.Main
 {
     public class CohortManager
-    {
+    { 
+        public bool search(List<string> list, string name)
+        {
+
+
+            return list.Contains(name);
+        }
+
     }
 }
