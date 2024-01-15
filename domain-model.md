@@ -8,7 +8,14 @@
 |-------------|---------------------|-----------------------------------|
 | `name`      | String              | Represents the name of the user.  |
 | `cart`      | Order               | Holds current items in the cart.  |
-| `orders`    | List of Orders    | Holds previous orders.            |
+| `orders`    | List of Orders      | Holds previous orders.            |
+
+
+
+| Method                | Return Type         | Description                                                 |
+|-----------------------|---------------------|-------------------------------------------------------------|
+| `BuyItems()`          | Void                | Adds items from the cart to the list of orders.              |
+| `ClearCart()`         | Void                | Clears all items in the cart.                                |
 
 ### Product
 
