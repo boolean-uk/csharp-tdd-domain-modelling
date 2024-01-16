@@ -8,8 +8,15 @@ namespace tdd_domain_modelling.CSharp.Test
     {
         [Test]
         public void FirstTest()
-        {
+        {   
+            //Arrange
             CohortManager core = new CohortManager();
+
+            
+            string cohortSearch = "Cohort1";
+            bool result = core.isInList(cohortSearch);
+
+            Assert.IsTrue(result);
         }
     }
 }

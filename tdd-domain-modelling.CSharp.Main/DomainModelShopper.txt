@@ -1,0 +1,8 @@
+class: Basket
+
+Properties
+- List<String[]> ItemList (string Item, string ItemPrice)
+	
+
+Method: 
+- Int SumOfPrices(returns sum of prices) in ItemList
