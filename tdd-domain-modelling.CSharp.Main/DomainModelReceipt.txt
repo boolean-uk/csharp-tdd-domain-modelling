@@ -1,0 +1,7 @@
+Class Basket:
+Properties
+	-ItemDict<dictionary> (string(itemname), float(prize))
+
+Methods:
+	-totalPrice(); returns the sum of all values (prizes)
+	-list<strings>(); returns unitPrice, quantity, and name(string)
