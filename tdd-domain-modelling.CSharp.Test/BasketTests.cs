@@ -7,38 +7,38 @@ namespace tdd_domain_modelling.CSharp.Test
     [TestFixture]
     public class BasketTest
     {
+        private Basket _basket;
+
+        [SetUp]
+        public void Setup()
+        {
+            _basket = new Basket();
+            _basket._items.Add("Milk", 2);
+        }
 
         [Test]
         public void TestReturnTrueIfItemIsNotInBasket()
         {
-            Basket basket = new Basket();
-            basket._items.Add("Milk", 2);
-            Assert.IsTrue(basket.AddItem("Eggs", 6));
+            Assert.IsTrue(_basket.AddItem("Eggs", 6));
         }
 
         [Test]
         public void TestReturnFalseIfItemIsInBasket()
         {
-            Basket basket = new Basket();
-            basket._items.Add("Milk", 2);
-            Assert.IsFalse(basket.AddItem("Milk", 5));
+            Assert.IsFalse(_basket.AddItem("Milk", 5));
         }
 
         [Test]
         public void TestIfItemWasAdded()
         {
-            Basket basket = new Basket();
-            basket.AddItem("Milk", 2);
-            Assert.IsTrue(basket._items.ContainsKey("Milk"));
+            Assert.IsTrue(_basket._items.ContainsKey("Milk"));
         }
 
         [Test]
         public void TestTotalCostOfBasket()
         {
-            Basket basket = new Basket();
-            basket._items.Add("Milk", 2);
-            basket._items.Add("Eggs", 1);
-            Assert.AreEqual(3, basket.Total());
+            _basket._items.Add("Eggs", 1);
+            Assert.AreEqual(3, _basket.Total());
         }
 
     }
