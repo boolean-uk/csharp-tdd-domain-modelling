@@ -22,7 +22,7 @@ namespace tdd_domain_modelling.CSharp.Main
         }
         public int total()
         {
-            throw new NotImplementedException();
+            return totalCost;
         }
     }
 }
