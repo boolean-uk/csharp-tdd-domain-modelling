@@ -12,11 +12,11 @@ namespace tdd_domain_modelling.CSharp.Main
         public Dictionary<string, int> items = new Dictionary<string, int>();
         public bool addItem(string name, int price)
         {
-            
+            throw new NotImplementedException();
         }
         public int total()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
