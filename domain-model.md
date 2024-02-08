@@ -41,3 +41,32 @@ List<string> GetReceipt()
 int GetBasketCost()
 returns int cost form products.
 
+
+
+
+____________________________________________________________________________________________________________________________
+
+As a supermarket shopper,
+So that I can restock my cupboards,
+I want to add products into my basket.
+
+class store 
+dictionary<itemid,items > stock
+
+
+Class ShopingBasket
+Properties 
+public dictinary<string itemid, Item > basket (get; set;) // add item id to item class
+
+public AddItem(itemid)
+
+As a supermarket shopper,
+So that I can pay for products at checkout,
+I'd like to be able to know the total cost of items in my basket.
+
+add method to Shoping basket 
+method
+
+public string GetCostOfBasket()
+
+
