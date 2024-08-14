@@ -8,5 +8,9 @@ namespace tdd_domain_modelling.CSharp.Main
 {
     public class CohortManager
     {
+        public CohortManager() 
+        {
+
+        }
     }
 }
